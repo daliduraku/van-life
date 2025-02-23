@@ -14,10 +14,10 @@ import HostVanDetail from "./pages/Host/HostVanDetail"
 import HostVanInfo from "./pages/Host/HostVanInfo"
 import HostVanPricing from "./pages/Host/HostVanPricing"
 import HostVanPhotos from "./pages/Host/HostVanPhotos"
+import NotFound from "./pages/NotFound"
 import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
-import NotFound from './pages/NotFound';
-import AuthRequired from './components/AuthRequired'
+import AuthRequired from "./components/AuthRequired"
 
 import "./server"
 
@@ -34,7 +34,6 @@ function App() {
             path="login"
             element={<Login />}
           />
-          
 
           <Route element={<AuthRequired />}>
             <Route path="host" element={<HostLayout />}>
@@ -50,7 +49,7 @@ function App() {
             </Route>
           </Route>
 
-          <Route path='*' element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
